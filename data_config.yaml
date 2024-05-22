@@ -1,0 +1,115 @@
+# Identifies the file as a data kit configuration and should be set to “data” for a data kit config file.  Typically, this should not be changed.
+config_type: data
+
+# Unique identifier that describes the version of the data_config.yaml schema. Typically, this should not be changed.
+config_version: 1
+
+# Human readable title that succinctly describes the data kit contents
+title: BLS QCEW Data Summarization for Wide and Long-form Outputs.
+
+# Current version identifier for the data kit. Should be a machine-readable value in one of the following forms:
+version: 2024-05-14
+
+# A brief, human-readable description of the purpose and contents of the data kit.
+description: This data kit is intended to automate the summarization of standardized Quarterly Census of Employment and Wages (QCEW) data, pulled from qcew_data_kit. The kit includes all resources necessary to produce long and wide-form annual and/or quarterly tables with county and region-wide data.
+
+# Contact information for the provider of the data kit
+provider:
+  organization_name: Mid-Ohio Regional Planning Commission
+  organization_url: https://morpc.org
+  contact_name: Oliver Gwynn
+  contact_email: ogwynn@morpc.org
+
+# A listing of the outputs produced by the data kit with key metadata
+outputs:
+    ### The properties below represent a list of outputs.  Each element in the list is comprised of several properties.  
+    ### A hyphen before a property name indicates that a new list element is starting. 
+    ### The following properties are required:
+    # Path to Frictionless Resource descriptor file
+  - resource_file_path: ./assets/output_data/qcew_annual_long_summarized.resource.yaml
+    # Short, descriptive title for the dataset
+    title: Quarterly Census of Employment and Wage, Annual Data (long form)
+    # Short description of the item that provides people information they can scan at a glance. 2,048 characters max.
+    summary: Annual count of employment and wages reported by employers, at the county level.
+    # ISO8601-compliant string representing the date or datetime that best describes the facts included in the dataset
+    # reference_date: 
+    # ISO8601-compliant string representing the date or datetime that best describes when the dataset was produced. 
+    # This should reflect the vintage of the output data, not the input data
+    vintage_date: 2024-05-01
+    ### The following properties are optional, but strongly recommended
+    # A more in-depth description of the data than is provided by the summary
+    description: Each quarter the U.S. Census Bureau Population Estimates Program produces count of employment and wages reported by employers for the prior quarter. This data set includes annual factors for each given year, average establishment counts and employment levels, total wages, taxable wages and annual contributions, average annual and weekly pay, along with over the year change by count and percentage for each previously mentioned factor. The location quotient for average establishment counts and employment levels, total wages, taxable wages and annual contributions are also included. Each of these factotrs are indentified by county code, ownership code, industry code, year, and quarter. This data has been formatted in long form and includes region summary data, to allow for filtering in the MORPC Insights platform.
+    # The terms_of_use property includes information about how the item can be used and by whom.
+    terms_of_use: This work is in the public domain
+    # The tags property contains a comma-separated list of keywords that can be use to search for datasets or filter them.
+    tags: establishment, employment, wage, industry, jobs
+    # The credits property can be used to provide attribution to the parties responsible for the data or for upstream data from which this data was derived.
+    credits: Data from U.S. Bureau of Labor Statistics Quarterly Census of Employment and Wages, processed by Mid-Ohio Regional Planning Commission
+    # A string describing how frequently the data will be updated, e.g. "Annually", "Monthly", "Every four years" 
+    update_frequency: Annually
+    ### The following properties are optional. They will not be used directly by Insights platform phase 1, but may be used in later incarnations or for administrative purposes
+    # For data with geographic context, the string that best describes the region covered by the data, e.g. "City of Columbus", "Franklin County", "MORPC 15-County Region"
+    geo_coverage: MORPC 15-County Region
+    # For data with geographic context, the geographic unit or summary level that each record represents, e.g. "Location", "Census tract", "Municipality", "County"
+    geo_unit: County
+    # For data with temporal context, the earliest and latest times included in the set.  Specify in the following form, where the start and end are ISO8601-compliant date or datetime strings
+    # [start,end]
+    # time_bounds: 
+    # For data with temporal context, the temporal unit or period that each record represents, e.g. "Point","Monthly period","1-year period","5-year period" 
+    time_unit: 1-year period
+
+    ### The following are entries for a second output.  Note the hypen preceeding the first property, 
+    ### which indicates that the following properties form another item in a list.
+  - resource_file_path: ./assets/output_data/qcew_quarterly_long_summarized.resource.yaml
+    title: Quarterly Census of Employment and Wage, Quarterly Data (long form)
+    summary:  Annual count of employment and wages reported by employers, at the county level.
+    # reference_date: 
+    vintage_date: 2024-05-01
+    description: Each quarter the U.S. Census Bureau Population Estimates Program produces count of employment and wages reported by employers for the prior quarter. This data set includes annual factors for each given year, average establishment counts and employment levels, total wages, taxable wages and annual contributions, average annual and weekly pay, along with over the year change by count and percentage for each previously mentioned factor. The location quotient for average establishment counts and employment levels, total wages, taxable wages and annual contributions are also included. Each of these factotrs are indentified by county code, ownership code, industry code, year, and quarter. This data has been formatted in long form and includes region summary data, to allow for filtering in the MORPC Insights platform.
+    terms_of_use: This work is in the public domain
+    tags: establishment, employment, wage, industry, jobs
+    credits: Data from U.S. Bureau of Labor Statistics Quarterly Census of Employment and Wages, processed by Mid-Ohio Regional Planning Commission
+    update_frequency: Annually
+    geo_coverage: MORPC 15-County Region
+    geo_unit: County
+    time_unit: Quarterly period
+
+  - resource_file_path: ./assets/output_data/qcew_annual_wide_summarized.resource.yaml
+    title: Quarterly Census of Employment and Wage, Annual Data (wide form)
+    summary:  Quarterly count of employment and wages reported by employers, at the county level.
+    # reference_date: 
+    vintage_date: 2024-05-01
+    description: Each quarter the U.S. Census Bureau Population Estimates Program produces count of employment and wages reported by employers for the prior quarter. This data set includes annual factors for each given year, average establishment counts and employment levels, total wages, taxable wages and annual contributions, average annual and weekly pay, along with over the year change by count and percentage for each previously mentioned factor. The location quotient for average establishment counts and employment levels, total wages, taxable wages and annual contributions are also included. Each of these factotrs are indentified by county code, ownership code, industry code, year, and quarter. This data includes region summary data and has been left in wide format.
+    terms_of_use: This work is in the public domain
+    tags: establishment, employment, wage, industry, jobs
+    credits: Data from U.S. Bureau of Labor Statistics Quarterly Census of Employment and Wages, processed by Mid-Ohio Regional Planning Commission
+    update_frequency: Annually
+    geo_coverage: MORPC 15-County Region
+    geo_unit: County
+    time_unit: 1-year period
+
+  - resource_file_path: ./assets/output_data/qcew_quarterly_wide_summarized.resource.yaml
+    title: Quarterly Census of Employment and Wage, Quarterly Data (wide form)
+    summary:  Quarterly count of employment and wages reported by employers, at the county level.
+    # reference_date: 
+    vintage_date: 2024-05-01
+    description: Each quarter the U.S. Census Bureau Population Estimates Program produces count of employment and wages reported by employers for the prior quarter. This data set includes annual factors for each given year, average establishment counts and employment levels, total wages, taxable wages and annual contributions, average annual and weekly pay, along with over the year change by count and percentage for each previously mentioned factor. The location quotient for average establishment counts and employment levels, total wages, taxable wages and annual contributions are also included. Each of these factotrs are indentified by county code, ownership code, industry code, year, and quarter. This data includes region summary data and has been left in wide format.
+    terms_of_use: This work is in the public domain
+    tags: establishment, employment, wage, industry, jobs
+    credits: Data from U.S. Bureau of Labor Statistics Quarterly Census of Employment and Wages, processed by Mid-Ohio Regional Planning Commission
+    update_frequency: Annually
+    geo_coverage: MORPC 15-County Region
+    geo_unit: County
+    time_unit: Quarterly period
+
+# The following process is required to transform the inputs to outputs with key metadata
+processes:
+    ### The following properties are required:
+    # Path to the process.
+  - process_description_path: ./assets/01-summarize_qcew_data.ipynb
+    ### The following properties are optional, but strongly recommended   
+    # Type of process: "manual", "automatic", or "hybrid"
+    process_type: automatic
+    # For automatic or hybrid processes, process_environment refer to software used to carry out the process. Not required for manual processes. 
+    # Valid options are:"python","jupyter","r","rmarkdown"
+    process_environment: jupyter

@@ -1,0 +1,47 @@
+fields:
+  - name: area_fips
+    type: string
+    description: 5-character FIPS code that identifies the geographic area (county) that the data represents
+    maxLength: 5
+  - name: own_code
+    type: string
+    description: 1-character ownership code that identifies the establishment ownership type (e.g., private, government)
+    maxLength: 1
+  - name: industry_code
+    type: string
+    description: 6-character North American Industry Classification System (NAICS) code to assign establishments to industries
+    maxLength: 6
+  - name: agglvl_code
+    type: string
+    description: 2-character codes used on summary records produced by the Quarterly Census of Employment and Wages (QCEW) program to indicate the aggregation level of the data summarized on the record.
+    maxLength: 2
+  - name: size_code
+    type: string
+    description: 1-character size code used to identify the size of an establishment
+    maxLength: 1
+  - name: year
+    type: string
+    description: 4-character year
+    maxLength: 4
+  - name: qtr
+    type: string
+    description: 1-character quarter (always A for annual)
+    maxLength: 1
+  - name: disclosure_code
+    type: string
+    description: 1-character disclosure code (either ""(blank) or 'N') not disclosed)
+    maxLength: 1
+  - name: lq_disclosure_code
+    type: string
+    description: 1-character location-quotient disclosure code (either ""(blank) or 'N') not disclosed)
+  - name: oty_disclosure_code
+    type: string
+    description: 1-character over-the-year disclosure code (either ""(blank) or 'N') not disclosed)
+  - name: variable
+    type: string
+    description: Name of variable
+  - name: value
+    type: number
+    description: Value of the variable for the indicted county and year/qtr
+missingValues:
+  - ''
