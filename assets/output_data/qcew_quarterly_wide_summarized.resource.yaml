@@ -1,0 +1,14 @@
+name: qcew_quarterly_wide
+type: table
+title: Compiled QCEW County Data, Quarterly, 2020-2020 (wide form)
+description: Employment and wage data for counties in MOPRC region, derived from the
+  U.S. Bureau of Labor Statistics.
+profile: tabular-data-resource
+path: qcew_quarterly_wide_summarized.csv
+scheme: file
+format: csv
+mediatype: text/csv
+encoding: utf-8
+hash: dca58c3062846e66273d734304ada505
+bytes: 9520372
+schema: morpc-qcew-quarterly.schema.yaml

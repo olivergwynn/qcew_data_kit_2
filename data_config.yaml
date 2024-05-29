@@ -11,7 +11,7 @@ title: BLS QCEW Data Summarization for Wide and Long-form Outputs.
 version: 2024-05-14
 
 # A brief, human-readable description of the purpose and contents of the data kit.
-description: This data kit is intended to create regional summary data from county-based QCEW data, and output datasets containing both county-level and region wide QCEW data. For each combination of non-regional identification codes (year, qtr, own_code, industry_code, agglvl_code) data will be summariezed for each variable accross all counties (area_fips). The kit includes all resources necessary to produce long and wide-form annual and/or quarterly tables with county and region-wide data.
+description: This data kit is intended to automate the summarization of standardized Quarterly Census of Employment and Wages (QCEW) data, pulled from qcew_data_kit. The kit includes all resources necessary to produce long and wide-form annual and/or quarterly tables with county and region-wide data.
 
 # Contact information for the provider of the data kit
 provider:
